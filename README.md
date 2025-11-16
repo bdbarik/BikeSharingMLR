@@ -1,52 +1,54 @@
-# Project Name
-> Outline a brief description of your project.
+# Bike Sharing Demand Prediction
 
+> A multiple linear regression project to identify key factors influencing daily bike rental demand.
 
 ## Table of Contents
+
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
 * [Conclusions](#conclusions)
 * [Acknowledgements](#acknowledgements)
-
-<!-- You can include any other section that is pertinent to your problem -->
+* [Contact](#contact)
 
 ## General Information
-- Provide general information about your project here.
-- What is the background of your project?
-- What is the business probem that your project is trying to solve?
-- What is the dataset that is being used?
 
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+* This project builds a **multiple linear regression model** to predict the daily bike demand (`cnt`) for a US-based bike-sharing company, **BoomBikes**.
+* The background of the project is rooted in a **post-pandemic recovery scenario**, where BoomBikes aims to understand demand patterns to improve operational and strategic decisions.
+* The business problem: **Identify significant variables driving bike demand** and determine how well these variables explain demand variations.
+* The dataset used is **`day.csv`**, containing daily aggregated bike rental counts along with weather, seasonal, and temporal features.
+* Key steps performed include:
+
+  * Data cleaning
+  * Categorical conversion & dummy encoding
+  * Train-test split
+  * VIF analysis to detect multicollinearity
+  * Backward elimination using p-values
+  * Final regression model building
+  * Model evaluation through residual analysis and R-squared metrics
 
 ## Conclusions
-- Conclusion 1 from the analysis
-- Conclusion 2 from the analysis
-- Conclusion 3 from the analysis
-- Conclusion 4 from the analysis
 
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
-
+* **Temperature** is one of the strongest predictors of bike demand, positively affecting rental counts.
+* **Seasonality**, particularly **winter, summer, and fall months**, significantly increases demand compared to the baseline.
+* **Weather conditions**, such as cloudy or rainy weather, reduce bike rental demand.
+* **Year (`yr`)** shows that overall demand increased substantially from 2018 to 2019, indicating growing adoption of bike-sharing services.
+* The final model achieved a **test R-squared of ~0.84**, demonstrating strong explanatory power and good generalization.
 
 ## Technologies Used
-- library - version 1.0
-- library - version 2.0
-- library - version 3.0
 
-<!-- As the libraries versions keep on changing, it is recommended to mention the version of library used in this project -->
+* Python 3.x
+* pandas
+* numpy
+* statsmodels
+* scikit-learn
+* matplotlib
 
 ## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- References if any...
-- This project was based on [this tutorial](https://www.example.com).
 
+* This project was inspired by a business case study on post-pandemic demand forecasting.
+* Dataset provided as part of a machine learning assignment.
+* Modeling approach informed by best practices in linear regression and multicollinearity handling.
 
 ## Contact
-Created by [@githubusername] - feel free to contact me!
 
-
-<!-- Optional -->
-<!-- ## License -->
-<!-- This project is open source and available under the [... License](). -->
-
-<!-- You don't have to include all sections - just the one's relevant to your project -->
+Created by [@bdbarik] - feel free to contact me!
